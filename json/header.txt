@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Javascript</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href=".\css\styleB.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+<div class="row">
+  <div class="col-sm-3 col-xs-1"> 
+  	<img src="./images/logo1.jpg" alt="logo" > 
+  </div>
+  <div class="col-sm-7 col-xs-9">
+  	<ul  class="list-inline">	
+			<li><a class="list-inline-item" href="./menu.html">Menu</a></li>
+			<li><a class="list-inline-item" href="./main.html">Main</a></li>
+			<li><a class="list-inline-item" href="./special.html">Special</a></li>
+			<li><a class="list-inline-item" href="./special.html">Sign up</a></li>
+			<li><a class="list-inline-item" href="./about.html">About</a></li>
+	</ul>
+	</div>
+	<div class="col-sm-2 col-xs-2">
+		<a href="cart.html"><img src="./images/cart.png" alt="cart" style="width:60px;height:60px;"> </a>	
+  </div>
+  </div>
+</div>

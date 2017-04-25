@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cart</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href=".\css\styleB.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<div class="row">
+				<div class="col-sm-3 col-xs-3"> 
+  					<img src="./images/logo.png" alt="logo" style="width:150px;height:150px"> 
+  				</div>
+				<div class="col-sm-7">
+				  	<ul  class="list-inline">	
+				  		<li><a class="list-inline-item" href="./">Main</a></li>
+						<li><a class="list-inline-item" href="./menu.html">Menu</a></li>
+						<li><a class="list-inline-item" href="./special">Special</a></li>
+						<li><a class="list-inline-item" href="./about">About</a></li>
+					</ul>
+				<div class="col-sm-2">
+					<a href="cart.html"><img src="./images/cart.jpg" alt="cart" style="width:60px;height:60px;"> <span class="badge" id="numItems"></span></a>	
+  				</div>
+  				 </div>
+</div>
+	<h1>Your order:</h1>
+	<div id="cart"></div>
+	
+	<div class="row" >
+	<br><br>
+	<h2 id="data">Enter your phone number:</h2>
+	<input type="phone" id="phone" ><br>
+
+	<button type="button" class="btn btn-primary" onclick="sendOrder();">Order  </button><hr>
+	</div>
+	
+	<footer >
+    <div class="list-inline">
+		<img src="./images/logo.png" alt="logo" height="100" width="100">
+		<a class="list-inline-item" href="./service.html">Customer Service</a>
+		<a class="list-inline-item"href="./account.html">Account</a>
+		<a class="list-inline-item"href="./special.html">Special</a>
+		<a class="list-inline-item"href="./about.html">About</a>
+	</div>
+		<div class="row">
+		<div class="col-sm-3">
+		<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+		<div class="col-sm-3">
+			<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+		<div class="col-sm-3">
+			<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+		<div class="col-sm-3">
+			<p id="items">items</p>
+		</div>
+		</div>
+	</footer>
+</div>
+
+<script type="text/javascript" src="./js/setting.js"></script>
+<script type="text/javascript" src="./js/funcs.js"></script>
+
+<script type="text/javascript" src="./js/ordersClient.js"></script>
+<script type="text/javascript" >
+getMenuArr();
+generateMenuNum();
+</script>
+
+<script type="text/javascript" src="./js/cartClient.js"></script>
+<script type="text/javascript">
+showCart();
+createCart();
+</script> 
+
+
+</body>
+</html>

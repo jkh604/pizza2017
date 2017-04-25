@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/styleB.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="page-header">
+	<div class="row">
+		<img class="col-md-2" src="./images/logo.png" alt="logo" style="width:150px;height:100px"> 
+			<div class="col-md-8 col-md-push-2">
+				<ul  class="list-inline">	
+					<li><a class="list-inline-item" href="./menu">Menu</a></li>
+					<li><a class="list-inline-item" href="./">Main</a></li>
+					<li><a class="list-inline-item" href="./special.html">Special</a></li>
+					<li><a class="list-inline-item" href="./about">About</a></li>
+				</ul>
+			</div>
+		<div class ="col-md-2 col-md-pull-1">
+			<a href="cart.html"><img class="cart" src="./images/cart.jpg" alt="cart" style="width:60px;height:60px;"><span class="badge" id="num">0</span></a>
+		</div>
+	</div>
+</div>
+	<div class="col-md-12">
+		<h3>Sign Up Form</h3>
+<!-- action: signupServer program on web server will handle the form -->
+		<form action="../signupServer" method="post">
+			<div id="signup">
+	  			Email:<br>
+	  		<!-- name field is for server side, id is for the client side js -->
+	  			<input type="text" name="email" value="" id="email"><br>
+	  			Password:<br>
+	  			<input type="password" name="pwd" value="" id="pwd"><br><br>
+	  			<input type="submit" value="Submit" onclick="submit">
+	  		</div>
+		</form>
+	</div>
+	<!-- benefit of having the scripts and js code at the end of the body: it will load the webpage faster -->
+	<script type="text/javascript" src="./js/validate.js"></script>
+	<script type="text/javascript">
+		validateEmail();
+		validatePwd();
+	</script>
+	<br>
+<footer>
+	<img src="./images/logo.png" alt="logo" style="width:150px;height:100px">
+	<a class="list-inline-item" href="./service">Customer Service</a>
+	<a class="list-inline-item" href="./signup">Account</a>
+	<a class="list-inline-item" href="./special">Special</a>
+	<a class="list-inline-item" href="./about">About</a>
+	<button type="button" class = "btn btn-danger" onclick="clearCart()">Clear Cart</button>
+	<div class="row">
+		<div class="col-md-4">
+			<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+		<div class="col-md-4">
+			<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+		<div class="col-md-4">
+			<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

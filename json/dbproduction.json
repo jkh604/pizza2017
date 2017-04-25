@@ -1,0 +1,6 @@
+{
+	"devServer":
+	{
+		"url":"mongodb://pizzacompanyadmin:nkJppGJjvD91aM67dwhYudBAFc1qe9Q121dkszlkSVi2krTDeOhg8nCzpKBjJUTuD8aQcshGMAv18hG7YWdpNQ==@pizzacompanyadmin.documents.azure.com:10250/?ssl=true"
+	}
+}

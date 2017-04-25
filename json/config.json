@@ -1,0 +1,6 @@
+{
+	 "devServer":
+    {
+       "url":"mongodb://pizzaAdmin:abc123@localhost:27017/pizzadb"
+    }
+}

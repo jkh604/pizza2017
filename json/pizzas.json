@@ -1,0 +1,3 @@
+{"_id":{"$oid":"58f2744931f3afb2b3577cbf"},"name":"Cheese","price":7.89,"size":"Medium","img":"cheese.png","description":"Four Cheeses"}
+{"_id":{"$oid":"58f2747231f3afb2b3577cc0"},"name":"Pepperoni","price":9.99,"size":"Medium","img":"pizza.png","description":"Pepperoni and One Cheese"}
+{"_id":{"$oid":"58f274a331f3afb2b3577cc1"},"name":"Alfredo","price":10.89,"size":"Medium","img":"alfredo-pizza.png","description":"Chicken Alfredo with One Cheese"}

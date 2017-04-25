@@ -1,0 +1,102 @@
+var express=require('express');
+var http=require('http');
+var path=require('path');
+var handlebars = require("express-handlebars").create({defaultLayout: "main"});
+var bodyParser = require('body-parser');
+var db = require('./db');
+var dbLink = require('./json/config.json');
+var url = dbLink.devServer.url;
+
+var exphbs = require('express-handlebars');
+var app = express();
+var hbs = exphbs.create({defaultLayout:"main"});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+var publicPath=path.resolve(__dirname,"public"); //Double Underscore Direct Name: Figures out Absolute Path of the Public Folder
+												 //For My Public: The Absolute Path c:\users\username\pizza2017\public
+app.use(express.static(publicPath));
+app.use(require('./routers/getMenuItems'));
+app.use(require('./routers/popMenus'));
+app.use(bodyParser.json());
+//app.use(require('./routers/signup'));
+
+db.connect(url, function(err) {
+if(err) {
+	console.log('Unable to connect to Mongo.')
+	process.exit(1)
+} /*else {
+	
+	app.listen(3000,function() {
+		console.log('Listening on port 3000...')
+	} 
+*/	
+});
+
+//Handle get request from the browser
+app.get('/',function(req, res)
+	{
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		//res.send("<h2> Welcome to our first server!</h2>");
+		console.log("Here comes a request!");
+		res.sendFile(`${publicPath}/main.html`);
+	});
+
+app.get('/menu',function(req, res) {
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		console.log("a request from main!"); //Print Log on Server
+		res.sendFile(`${publicPath}/menu.html`);
+	});
+
+app.get('/about',function(req, res) {
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		console.log("a request from menu!"); //Print Log on Server
+		res.sendFile(`${publicPath}/about.html`);
+	});
+
+app.get('/signup',function(req, res)
+	{
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		//res.send("<h2> Welcome to our first server!</h2>");
+		res.sendFile(`${publicPath}/signup.html`);
+	});
+
+app.get('/special',function(req, res) {
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		console.log("a request for specials!"); //Print Log on Server
+		res.sendFile(`${publicPath}/special.html`);
+	});
+
+app.get('/cart',function(req, res) {
+		//req: Request from the Browser
+		//res: Response from the Server to the Browser
+		console.log("a request for the cart!"); //Print Log on Server
+		res.sendFile(`${publicPath}/cart.html`);
+	});
+
+app.post('/signupServer', function(req, res){
+	console.log("A request from signup!");
+	res.send("The server is handling your request " + req.body.email);
+});
+
+
+app.use( function(req, res, next){
+		//Next: Is callback function after this function is done
+		res.type("text/plain");
+		res.status(404);
+		res.send("404-Not Found");
+	});
+
+app.listen(3000, function()
+{
+	console.log("Server is up on port 3000!");
+})
+
+app.set('db',db);
+module.exports.app = app;

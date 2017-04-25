@@ -1,0 +1,6 @@
+{
+   "devServer":[
+    {
+       "url":"mongodb://pizza1:pizza1@localhost/pizzadb"
+       }]
+}

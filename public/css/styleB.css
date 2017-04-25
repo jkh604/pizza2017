@@ -1,0 +1,33 @@
+.page-header{
+	font-size: 2em;
+}
+
+.page-header li{
+	margin-top: 60px;
+	margin-right: 20px;
+}
+.page-header a{
+	color:red;
+}
+.page-header img{
+	width: 60px;
+	height:60px;
+}
+.row button{
+	margin-top: 10px;
+	background-color: red;
+}
+
+.row button:hover{
+	background-color: #AF0000;
+}
+.row button:visited,
+.row button:focus{
+	background-color: red;
+}
+.row button:active{
+	background-color: red;
+}
+.top-margin{
+  margin-top: 40px;
+}
