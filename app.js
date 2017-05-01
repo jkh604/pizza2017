@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var db = require('./db');
 ///config.json
 //dbproduction.json
-var dbLink = require('./json/dbproduction.json');
+var dbLink = require('./json/config.json');
 var url = dbLink.devServer.url;
 
 var exphbs = require('express-handlebars');
@@ -18,7 +18,8 @@ app.use(session({
 	secret: 'secret msg',
 	resave: false,
 	saveUninitialized: true
-}))
+}));
+app.use(require('./routers/signupServer'));
 
 var authAdmin = function(req, res, next)
 {
